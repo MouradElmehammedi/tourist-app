@@ -1,0 +1,47 @@
+<ion-content [fullscreen]="true">
+  <div style="display: flex; justify-content: space-between; padding: 10px 20px; margin-bottom: 30px;">
+    <ion-button (click)="backToHome()">
+      <ion-icon name="arrow-back-sharp"></ion-icon>
+      Back to home
+    </ion-button>
+  </div>
+  <div style="padding: 50px">
+    <h3>
+      Share a new place
+    </h3>
+    <form (ngSubmit)="onSubmit()" [formGroup]="myForm">
+      <ion-input
+        label="Place Name"
+        label-placement="floating"
+        fill="outline"
+        placeholder="Enter name"
+        formControlName="name"
+      ></ion-input>
+    
+      <br />
+    
+      <ion-textarea
+        rows="10"
+        label="Description"
+        formControlName="description"
+        [autoGrow]="true"
+        labelPlacement="floating"
+        fill="outline"
+        placeholder="Enter description"
+      ></ion-textarea>
+    
+      <br />
+    
+      <ion-select formControlName="rating" label="Rate the place" fill="outline" label-placement="floating">
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+        <ion-select-option value="5">5</ion-select-option>
+      </ion-select>
+    
+      <br />
+      <ion-button size="default" type="submit">Save</ion-button>
+    </form>
+  </div>
+</ion-content>

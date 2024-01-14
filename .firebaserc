@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tourist-app-95f10": {
+      "hosting": {
+        "app": [
+          "tourist-app-95f10"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tourist-app-95f10"
+  }
+}
